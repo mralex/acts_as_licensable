@@ -1,7 +1,8 @@
 ActsAsLicensable
 ================
 
-Introduction goes here.
+Provides the ability to add copyright licenses to model objects.
+
 
 
 Example
@@ -10,4 +11,4 @@ Example
 Example goes here.
 
 
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+Copyright (c) 2010 Alex Roberts, released under the MIT license
