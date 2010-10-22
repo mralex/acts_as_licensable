@@ -3,12 +3,33 @@ ActsAsLicensable
 
 Provides the ability to add copyright licenses to model objects.
 
+Requires Rails 3.0
+
+Install
+=======
+    $ rails generate acts-as-licensable:migration
+    $ rake db:migrate
+    $ rake acts-as-licensable:setup (Required for Development and Production environments, 
+                                     installs base set of copyright licenses)
+    
+Add 
+    acts_as_licensable 
+
+to any model you wish to make licensable
+
 
 
 Example
 =======
 
 Example goes here.
+
+
+Thanks
+======
+
+Partly based on work by Katipo Communications for acts_as_licensed
+
 
 
 Copyright (c) 2010 Alex Roberts, released under the MIT license
