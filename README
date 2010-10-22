@@ -12,10 +12,9 @@ Install
     $ rake acts-as-licensable:setup (Required for Development and Production environments, 
                                      installs base set of copyright licenses)
     
-Add 
-    acts_as_licensable 
+Add to any model you wish to make licensable
 
-to any model you wish to make licensable
+    acts_as_licensable 
 
 
 
@@ -29,7 +28,7 @@ Thanks
 ======
 
 Partly based on work by Katipo Communications for acts_as_licensed
-
+Plugin structure influenced by acts_as_taggable_on
 
 
 Copyright (c) 2010 Alex Roberts, released under the MIT license
