@@ -1,0 +1,115 @@
+# BSD
+# MIT
+# Apache
+# GPL (2, 3)
+# LGPL
+# AGPL
+# X11
+
+bsd:
+    name: BSD Public License
+    short_name: BSD
+    type: 1
+    
+mit:
+    name: MIT
+    short_name: MIT
+    type: 1
+
+apache:
+    name: Apache
+    short_name: Apache
+    type: 1
+    
+gpl_2:
+    name: GNU Public License
+    short_name: GPL
+    version: 2.0
+    type: 1
+
+gpl_3:
+    name: GNU Public License
+    short_name: GPL
+    version: 3.0
+    type: 1
+
+lgpl:
+    name: Lesser GNU Public License
+    short_name: LGPL
+    type: 1
+
+agpl:
+    name: Affero GNU Public License
+    short_name: AGPL
+    type: 1
+
+x11:
+    name: X11
+    short_name: X11
+    type: 1
+
+# CC-BY
+# CC-BY-SA
+# CC-BY-NC
+# CC-BY-ND
+# CC-BY-NC-SA
+# CC-BY-NC-ND
+
+cc_by:
+    name: Creative Commons Attribution
+    short_name: CC-BY
+    version: 3.0
+    url: http://creativecommons.org/licenses/by/3.0/
+    type: 2
+    
+cc_by_sa:
+    name: Creative Commons Attribution ShareAlike
+    short_name: CC-BY-SA
+    version: 3.0
+    url: http://creativecommons.org/licenses/by-sa/3.0/
+    type: 2
+    
+cc_by_nc:
+    name: Creative Commons Attribution NonCommercial
+    short_name: CC-BY-NC
+    version: 3.0
+    url: http://creativecommons.org/licenses/by-nc/3.0/
+    type: 2
+
+cc_by_nd:
+    name: Creative Commons Attribution NoDerivatives
+    short_name: CC-BY-ND
+    version: 3.0
+    url: http://creativecommons.org/licenses/by-nd/3.0/
+    type: 2
+
+cc_by_nc_sa:
+    name: Creative Commons Attribution NonCommercial ShareAlike
+    short_name: CC-BY-NC-SA
+    version: 3.0
+    url: http://creativecommons.org/licenses/by-nc-sa/3.0/
+    type: 2
+
+cc_by_nc_nd:
+    name: Creative Commons Attribution NonCommercial NoDerivatives
+    short_name: CC-BY-NC-ND
+    version: 3.0
+    url: http://creativecommons.org/licenses/by-nc-nd/3.0/
+    type: 2
+
+# CC0
+# PD
+# WTFPL
+
+cc0:
+    name: CC Zero
+    short_name: CC0
+    version: 1.0
+    url: http://creativecommons.org/publicdomain/zero/1.0/
+    type: 3
+
+wtfpl:
+    name: Do What The F*$k You Please Public License
+    short_name: WTFPL
+    version: 2.0
+    type: 3
