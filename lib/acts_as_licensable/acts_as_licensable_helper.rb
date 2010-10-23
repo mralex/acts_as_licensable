@@ -11,6 +11,8 @@ module ActsAsLicensable
         title += " " + licensable.license.version
       end
       
+      options[:rel] = "license"
+      
       link_to(title, licensable.license.url, options, html_options)
     end
   end
