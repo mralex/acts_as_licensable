@@ -19,6 +19,6 @@ class License < ActiveRecord::Base #:nodoc:
   end
   
   def to_s
-    self.name + " " + self.version
+    "#{self.name} #{self.version}"
   end
 end

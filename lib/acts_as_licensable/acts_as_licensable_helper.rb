@@ -9,7 +9,7 @@ module ActsAsLicensable
         title = licensable.license.name
       end
       
-      if options[:without_version].nil?
+      if options[:without_version].nil? && !licensable.license.version.nil?
         title += " " + licensable.license.version
       end
       
