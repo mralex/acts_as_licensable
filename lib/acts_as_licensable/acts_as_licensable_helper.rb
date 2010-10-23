@@ -1,6 +1,8 @@
 module ActsAsLicensable
   module Helper
     def link_to_license(licensable, options = {}, html_options = {})
+      return unless licensable.licensed?
+      
       if options[:short_license] == true
         title = licensable.license.short_name
       else
