@@ -26,6 +26,10 @@ module ActsAsLicensable
       def licensed?
         !license.nil?
       end
+      
+      def license_id=(license_id)
+        self.license = License.find(license_id)
+      end
     end
   end
 end
