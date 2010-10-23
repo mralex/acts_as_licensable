@@ -16,12 +16,27 @@ Add to any model you wish to make licensable
 
     acts_as_licensable 
 
+Provides
+========
 
+* Licensable model instance methods
+    licensed?
 
-Example
-=======
+* Helper methods
+    link_to_licensed(licensable, options{}, html_options{})
 
-Example goes here.
+    Outputs the license name and version. Takes options to customize the
+    license name and version appearance.
+
+    Options:
+      :short_license             Displays short version of name (GNU Public License => GPL)
+      :without_version           Hides version number
+
+    Example:
+      <%= link_to_licensed book %>  => <a href="http://creativecommons.org/license/by/3.0" rel="license">CC Attribution 3.0</a>
+      <%= link_to_licensed book, :short_license => true %> => <a ...>CC-BY 3.0</a>
+      <%= link_to_licensed book, :short_license => true, :without_version => true %> => <a ...>CC-BY</a>
+
 
 
 Thanks
