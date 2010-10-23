@@ -17,7 +17,7 @@ ActiveRecord::Schema.define :version => 0 do
      t.datetime :created_at
    end
    
-   create_table :book, :force => true do |t|
+   create_table :books, :force => true do |t|
      t.string :title, :string
      t.string :synopsis, :text
    end

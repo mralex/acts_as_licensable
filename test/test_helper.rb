@@ -1,31 +1,20 @@
+require 'sqlite3'
 require 'rubygems'
 require 'test/unit'
+require 'active_record'
 require 'active_support'
+require 'active_record/fixtures'
+require 'active_support/test_case'
+
+# ActiveSupport::TestCase.fixture_path = File.dirname(__FILE__) + "/fixtures/"
+# $LOAD_PATH.unshift(ActiveSupport::TestCase.fixture_path)
 
 def load_schema
   config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))
   
-  db_adapter = ENV['db']
-  
-  # no db passed, try one of these fine config-free DBs before bombing.
-  db_adapter ||=
-    begin
-      require 'rubygems'
-      require 'sqlite'
-      'sqlite'
-    rescue MissingSourceFile
-      begin
-        require 'sqlite3'
-        'sqlite3'
-      rescue MissingSourceFile
-      end
-    end
-
-  if db_adapter.nil?
-    raise "No DB Adapter selected. Pass the DB= option to pick one, or install Sqlite or Sqlite3."
-  end
-
-  ActiveRecord::Base.establish_connection(config[db_adapter])
-  load(File.dirname(__FILE__) + "/schema.rb")
+  ActiveRecord::Base.establish_connection(config["sqlite3"])
+  load File.dirname(__FILE__) + "/schema.rb"
   require File.dirname(__FILE__) + '/../rails/init'
+  
+  License.setup_licenses
 end

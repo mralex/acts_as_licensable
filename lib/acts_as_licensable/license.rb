@@ -11,9 +11,9 @@ class License < ActiveRecord::Base #:nodoc:
       license = license.last
       
       if !License.find_by_url(license['url'])
-        p "#{license['name']} #{license['version']}"
+        #p "#{license['name']} #{license['version']}"
         License.create! license
-        p " - Added"
+        #p " - Added"
       end
     end
   end
