@@ -1,8 +1,11 @@
 class License < ActiveRecord::Base #:nodoc:
+  has_many :licensings, :dependent => :destroy
   
   validates_presence_of :name
   validates_presence_of :url
   validates_inclusion_of :kind, :in => [1, 2, 3]
+  
+  attr_accessible :name, :short_name, :url, :version, :kind
   
   def self.setup_licenses
     license_yml = YAML.load(File.open(File.join(File.dirname(__FILE__), "../../fixtures/licenses.yml")))
