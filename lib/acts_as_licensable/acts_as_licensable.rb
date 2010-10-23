@@ -30,6 +30,10 @@ module ActsAsLicensable
       def license_id=(license_id)
         self.license = License.find(license_id)
       end
+      
+      def license_id
+        self.license.id
+      end
     end
   end
 end
