@@ -9,12 +9,14 @@
 bsd:
     name: BSD Public License
     short_name: BSD
+    version: 1.0
     kind: 1
     url: http://www.opensource.org/licenses/bsd-license.php
     
 mit:
     name: MIT
     short_name: MIT
+    version: 1.0
     kind: 1
     url: http://www.opensource.org/licenses/mit-license.php
 
