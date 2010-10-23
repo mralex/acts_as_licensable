@@ -1,0 +1,8 @@
+sqlite:
+    :adapter: sqlite
+    :dbfile: acts_as_licensable.sqlite.db
+    
+sqlite3:
+    :adapter: sqlite3
+    :dbfile: acts_as_licensable.sqlite3.db
+
