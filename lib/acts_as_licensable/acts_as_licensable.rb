@@ -1,7 +1,7 @@
 module ActsAsLicensable
   module Licensable
     def self.included(base)
-      base.send :extend, ClassMethods
+      base.extend ClassMethods
     end
     
     module ClassMethods
@@ -14,16 +14,18 @@ module ActsAsLicensable
       #    end
       def acts_as_licensable(options = {})
         class_eval do
-          has_one :licensing, :dependent => :destroy, :include => :license
-          has_one :license, :through => :licensing
+          has_one :licensing, :dependent => :destroy, :include => :license, :as => :licensable
+          has_one :license, :through => :licensing, :as => :licensable
         end
         
-        send :include, InstanceMethods
+        include ActsAsLicensable::Licensable::InstanceMethods
       end
     end
     
     module InstanceMethods
-      
+      def licensed?
+        !license.nil?
+      end
     end
   end
 end
