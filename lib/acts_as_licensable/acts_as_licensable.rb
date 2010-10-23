@@ -16,6 +16,7 @@ module ActsAsLicensable
         class_eval do
           has_one :licensing, :dependent => :destroy, :as => :licensable
           has_one :license, :through => :licensing, :as => :licensable
+          accepts_nested_attributes_for :licensing
         end
         
         include ActsAsLicensable::Licensable::InstanceMethods
