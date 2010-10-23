@@ -11,7 +11,7 @@ class ActsAsLicensableMigration < ActiveRecord::Migration
       t.string  :url
       
       # CODE_LICENSE; CONTENT_LICENSE; CC_LICENSE; OTHER_LICENSE (incl. public domain)
-      t.integer :type
+      t.integer :kind
 
       t.text    :description
 
