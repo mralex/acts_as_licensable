@@ -14,7 +14,7 @@ module ActsAsLicensable
       #    end
       def acts_as_licensable(options = {})
         class_eval do
-          has_one :licensing, :dependent => :destroy, :include => :license, :as => :licensable
+          has_one :licensing, :dependent => :destroy, :as => :licensable
           has_one :license, :through => :licensing, :as => :licensable
         end
         
@@ -29,6 +29,10 @@ module ActsAsLicensable
       
       def license_id=(license_id)
         self.license = License.find(license_id)
+      end
+      
+      def license_id
+        self.license.id
       end
     end
   end
