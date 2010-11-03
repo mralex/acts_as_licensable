@@ -21,3 +21,18 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+    gem.name = "acts_as_licensable"
+    gem.summary = "License your Active Record objects with various free/open source licenses"
+    gem.description = "License your Active Record objects with various free/open source licenses"
+    gem.email = "alex@redprocess.com"
+    gem.homepage = "https://github.com/mralex/acts_as_licensable"
+    gem.authors = ["Alex Roberts"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler"
+end
